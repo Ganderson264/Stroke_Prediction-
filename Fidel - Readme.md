@@ -1,4 +1,4 @@
-The original data contained 5,110 records in healthcare-dataset-stroke-data.csv
+The original data contained 5,110 records in healthcare-dataset-stroke-data.csv obtained from the Kaggle Website
 
 This data is organized by the following columns and values/value ranges:
 <ul>
@@ -14,7 +14,7 @@ This data is organized by the following columns and values/value ranges:
   <li>smoking_status : never, Smoked​, unknown​, Formerly smoked​, smokes​</li>
   <li>stroke : 0 (no), 1 (yes)</li>
 </ul>
-
+The dataset is EXTREMELY Inbalanced as less than 5% of the cases show a positive result for stroke
 For the "First Model" the data was "cleaned" by:
 <ul>
   <li>Dropping : 
@@ -28,7 +28,10 @@ For the "First Model" the data was "cleaned" by:
       <li>encoded ever_married with values : 0 (no) or 1 (yes)</li>
       <li>replace Residence_Type with Urban : 0 (no) or 1 (yes)</li>
     </ul>
-  <li>Initially Encoding or replacing columns with more than 2 possible values as follows:
+  </li>
+</ul>
+<ul>
+  <li>Data set A set was created by Encoding or replacing columns with more than 2 possible values as follows:
   <ul>
     <li>from the work_type column others where created and assigned 0,1 values accordingly as follows:</li>
     <ul>
@@ -44,9 +47,9 @@ For the "First Model" the data was "cleaned" by:
       <li>smoking_status_formerly smoked</li>
       <li>smoking_status_never smoked</li>
       <li>smoking_status_smokes</li>
+    </ul>
   </ul>
-  </ul>
-  <li>A Second Encoding for columns with more than 2 possible values was also used for testing as follows:
+  <li>Data set B was created by Encoding values for columns with more than 2 possible values as follows:
   <ul>
     <li>the work_type column values where replaced based on a perceived stress level as follows:</li>
     <ul>
@@ -62,6 +65,8 @@ For the "First Model" the data was "cleaned" by:
       <li>Unknown : 1</li>
       <li>formerly smoked : 2</li>
       <li>smokes : 3</li>
-  </ul>
-    
+    </ul>    
 </ul>
+
+    Scalled versions of Data sets A and B where created by running them through StandardScaller and MinMaxScaller
+To these new Scalled versions
