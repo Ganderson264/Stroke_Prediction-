@@ -93,7 +93,7 @@ This data is organized by the following columns and values/value ranges:
 
 # Analysing the results
 - 3360 result records were compiled from the model training runs
-- after looking at the metrics collected we decided to focus on the f1-result metric
+- after looking at the metrics collected we decided to focus on the f1-score metric
 - Compared Max, Average and Min values:
   - Ratios 1:4, 1:5, 1:6 had high Max spikes with values of 39.85%, 40.22% and 39.66 respectivelly but the average values fell bellow other ratios
   - Ratios 1:2 and 1:3 consistently had the higher mean values of 26.07% and 25.32% respectivelly
