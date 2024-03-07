@@ -2,38 +2,8 @@
 
 ## Project Overview
 
-This project develops a machine learning model to predict the likelihood of a stroke. Utilizing different Machine Learning Models we  processes health-related features to estimate stroke risk. Special attention was given to addressing class imbalance with different technics including Synthetic Minority Over-sampling Technique (SMOTE), refining features through selection techniques, and hyperparameter tuning using grid search for optimal model performance.
+This project develops a machine learning model to predict the likelihood of stroke events. Utilizing a dataset of patient records, the model is trained to recognize patterns and features associated with stroke incidents. Our primary goal is to achieve high recall to ensure maximum identification of true positive stroke cases.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Development](#development)
-- [Data](#data)
-- [Model](#model)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Installation
-
-To set up your local environment to run the model, follow these steps:
-
-```bash
-git clone https://github.com/your-username/stroke-prediction-model.git
-cd stroke-prediction-model
-pip install -r requirements.txt
-
-## Usage
-Run the model prediction with the following command:
-python predict.py
-
-Development
-After cloning the project, create a virtual environment and activate it:
-
-python -m venv venv
-source venv/bin/activate # On Windows use `venv\Scripts\activate`
-pip install -r requirements.txt
-```
 ## Data
 ### The original data contained 5,110 records in healthcare-dataset-stroke-data.csv obtained from the Kaggle Website
 The dataset comprises various health metrics and demographics to predict stroke occurrences:
@@ -61,13 +31,20 @@ This data is organized by the following columns and values/value ranges:
 - smoking_status : never, Smoked​, unknown​, Formerly smoked​, smokes​
 - stroke : 0 (no), 1 (yes)
 
+## Preprocessing
+
+Data preprocessing steps can include:
+- Handling missing values.
+- Encoding categorical variables.
+- Scaling numerical features.
+- Advanced feature engineering to enhance model performance.
+
 # Three approaches where taken to look for the best model
 
 ## Approach #1 suggested by Gabriel Anderson
 
 
 ## Approach #2 suggested by Fidel Lerma
-
 
 ### Cleaning the Data
 For this model the data was "cleaned" by:
@@ -184,8 +161,19 @@ We can tell that:
 
 
 ## Approach #3 suggested by Juan Carlos Lavieri
+### Feature Engineering
 
-## Model
+We generate polynomial features and interaction terms to unearth non-linear relationships and intricate interactions among features, aiming to bolster the predictive power of our model.
+
+### Model Training
+
+For the classification task, we employ a Random Forest classifier known for its robustness and efficacy in handling imbalanced datasets. The model training is performed on a balanced dataset achieved via oversampling techniques, specifically SMOTE.
+
+### Hyperparameter Tuning
+
+Hyperparameter optimization is conducted using GridSearchCV. This involves a comprehensive search across a range of parameter combinations, leveraging cross-validation to ascertain the most effective model configuration.
+
+### Model
 
 Our Random Forest model includes key hyperparameters such as:
 
@@ -201,6 +189,14 @@ Performance metrics on the test set:
 - **Recall (Stroke class)**: 2%
 - **F1-Score (Stroke class)**: 4%
 
+### Evaluation
+
+The model's performance is meticulously evaluated using a confusion matrix. Emphasis is placed on recall to minimize false negatives. We also measure precision, F1 score, and accuracy to gain a holistic view of the model's predictive capacity.
+
+### Best Model Results
+
+The optimal model configuration achieved a recall score of approximately 63.48%, marking a substantial improvement in the identification of actual stroke cases.
+
 ## Contributing
 
 We welcome contributions! Please follow these steps to contribute:
@@ -210,8 +206,3 @@ We welcome contributions! Please follow these steps to contribute:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
 4. Push to the branch (`git push origin feature/AmazingFeature`).
 5. Open a pull request.
-
-
-
-
-     
