@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project develops a machine learning model to predict the likelihood of a stroke. Utilizing the Random Forest classification algorithm, the model processes health-related features to estimate stroke risk. Special attention was given to addressing class imbalance with Synthetic Minority Over-sampling Technique (SMOTE), refining features through selection techniques, and hyperparameter tuning using grid search for optimal model performance.
+This project develops a machine learning model to predict the likelihood of a stroke. Utilizing different Machine Learning Models we  processes health-related features to estimate stroke risk. Special attention was given to addressing class imbalance with different technics including Synthetic Minority Over-sampling Technique (SMOTE), refining features through selection techniques, and hyperparameter tuning using grid search for optimal model performance.
 
 ## Table of Contents
 
